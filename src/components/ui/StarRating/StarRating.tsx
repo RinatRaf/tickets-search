@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import filledStar from './assets/star_filled.svg';
-import emptyStar from './assets/star_empty.svg';
-import grayStar from './assets/star_hover.svg';
-import style from './index.module.css';
+import React, { useState } from "react";
+import filledStar from "./assets/star_filled.svg";
+import emptyStar from "./assets/star_empty.svg";
+import grayStar from "./assets/star_hover.svg";
+import style from "./index.module.css";
+import { useRateMovie } from "../../../store/apiRating";
 
 interface StarRatingProps {
-  rating: number;
-  onRatingChange: (rating: number) => void;
+  filmId: string;
 }
 
-const StarRating: React.FC<StarRatingProps> = ({ rating, onRatingChange }) => {
+const StarRating: React.FC<StarRatingProps> = ({ filmId }) => {
+  const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState<number | null>(null);
+  // const [rateFilm] = useRateMovie();
 
   const handleMouseEnter = (index: number) => {
     setHoverRating(index);
@@ -21,14 +23,15 @@ const StarRating: React.FC<StarRatingProps> = ({ rating, onRatingChange }) => {
   };
 
   const handleClick = (index: number) => {
-    onRatingChange(index);
+    setRating(index);
+    // rateFilm({ FilmId: filmId, user_rate: index });
   };
 
   const renderStars = () => {
     return [1, 2, 3, 4, 5].map((index) => {
       let starIcon = emptyStar;
       if (hoverRating !== null) {
-        starIcon = hoverRating >= index ? grayStar: emptyStar ;
+        starIcon = hoverRating >= index ? grayStar : emptyStar;
       } else if (rating >= index) {
         starIcon = filledStar;
       }

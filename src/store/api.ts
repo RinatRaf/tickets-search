@@ -11,6 +11,7 @@ export interface IGetFilmsProps {
 export const FilmsApi = createApi({
 	reducerPath: "api",
 	baseQuery: fetchBaseQuery({ baseUrl: URL }),
+	tagTypes: ['Film'],
 	endpoints: (builder) => ({
 		getFilms: builder.query<IGetFilmsProps, IQueryParams>({
 			query: (params) => {
@@ -30,5 +31,8 @@ export const FilmsApi = createApi({
 	}),
 });
 
+type GetFilmsHook = typeof FilmsApi.endpoints.getFilms.useQuery;
+type GetFilmsByIdHook = typeof FilmsApi.endpoints.getFilmById.useQuery;
 
-export const {useGetFilmsQuery, useGetFilmByIdQuery} = FilmsApi
+export const useGetFilmsQuery:GetFilmsHook = FilmsApi.endpoints.getFilms.useQuery
+export const useGetFilmByIdQuery:GetFilmsByIdHook = FilmsApi.endpoints.getFilmById.useQuery

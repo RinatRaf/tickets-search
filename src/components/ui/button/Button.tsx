@@ -5,11 +5,11 @@ interface ButtonProps {
   fill?: boolean;
 }
 
-const Button = ({ children, ...props }: ButtonProps) => {
+const Button = ({ children, fill, ...props }: ButtonProps) => {
   return (
     <button
       {...props}
-      className={`${classes.myBtn} ${props.fill ? classes.fill : ""}`}
+      className={`${classes.myBtn} ${fill ? classes.fill : undefined}`}
     >
       {children}
     </button>

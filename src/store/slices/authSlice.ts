@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    isAuth: false
+    isAuth: !!localStorage.getItem('user_token')
 };
 
 export const loginUser = createAsyncThunk(
