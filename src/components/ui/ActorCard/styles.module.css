@@ -1,0 +1,19 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.image {
+	width: 160px;
+	height: 228px;
+	border-radius: 8px;
+	object-fit: cover;
+}
+
+.name {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	text-align: left;
+}

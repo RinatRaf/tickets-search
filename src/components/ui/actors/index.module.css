@@ -1,0 +1,16 @@
+.actorPhoto{
+    margin-bottom: 16px;
+    border-radius: 8px;
+    width: 160px;
+    height: 228px;
+}
+.actorName{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: #1b1f23;
+}
+
+.actorWrap {
+  margin-right: 24px;
+}

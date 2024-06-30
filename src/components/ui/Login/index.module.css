@@ -1,0 +1,96 @@
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modalContent {
+    background-color: #FFFFFF;
+    width: 258px;
+    height: 225px;
+    left: 50%;
+    top: 300px;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    position: fixed;
+}
+
+.wrapper {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    color: #1B1F23;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.login {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    margin-top: 25px;
+}
+
+.password {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    margin-top: 15px;
+}
+
+.inputWrapper {
+    width: 222px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid #E1E3E6;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.textInput {
+    color: #ABABAB;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    margin-left: 15px;
+    border: none;
+}
+
+.textInput:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.textInput:valid {
+    color: #1B1F23;
+}
+
+
+.buttons {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.loginStar {
+    margin-left: 30px;
+    margin-top: -10px;
+}
+
+.passwordStar {
+    margin-left: 37px;
+    margin-top: -10px;
+}

@@ -1,0 +1,44 @@
+.FilmPage {
+    padding:  8px 32px;    
+    background-color: #ededed;
+}
+
+.wrap {
+    display: flex;
+    padding: 24px;
+    background: #fff;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.filmImage{
+    height: 500px;
+    width: 400px;
+    margin-right: 32px;
+}
+
+.discWrap{
+    display: flex;    
+    margin-bottom: 16px;
+    margin-right: 434px;
+}
+
+.discTitle{
+    min-width: 90px;
+    margin-right: 16px;
+}
+
+.actors {
+	display: flex;
+	gap: 24px;
+}
+
+.actorsBlock {
+    padding-top: 8px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}

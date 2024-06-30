@@ -1,0 +1,14 @@
+.myBtn {   
+    border: 1px solid #f50;
+    border-radius: 8px;
+    width: 76px;
+    height: 40px;     
+    color: #f50;    
+    background: transparent;
+}
+
+.myBtn.fill {
+    font-family: var(--second-family);    
+    color: #fff;   
+    background: #f50;
+}

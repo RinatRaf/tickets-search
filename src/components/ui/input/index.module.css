@@ -1,0 +1,38 @@
+.Input{
+    position: relative;
+    border-radius: 8px;
+    padding: 12px;    
+    height: 40px;
+    box-shadow: none;
+    border: 1px solid #e1e3e6;
+    background: #fff url(./assets/search.svg)  no-repeat left 12px center;
+}
+
+.InputWrap{
+    display: flex;
+    width: 200px;    
+    flex-direction: column;
+}
+
+.Input:hover{  
+    border-color:#ced2d6;   
+}
+
+.Input:focus{
+    border-color:#f50;    
+    outline: none;
+}
+
+.Input.error{
+    border-color:#f04075; 
+}
+.LabelInput {
+    color: #1b1f23;
+}
+.LabelInput::after {
+    content: url(./assets/required.svg);
+    padding-left: 4px;
+}
+.description {
+    color: #ababab;
+}

@@ -1,0 +1,19 @@
+.home {
+    display: flex;
+    background-color: #ededed;
+    padding: 20px;
+}
+
+.filterWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 8px;
+    padding: 24px;
+    background-color: #fff;
+    height: 232px;
+    margin-right: 24px;
+}
+.filter{
+    margin-bottom: 20px;
+}

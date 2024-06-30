@@ -1,0 +1,37 @@
+.wrap {
+    display: flex;
+    padding: 24px;
+    width: 100%;
+    border-radius: 8px;
+    background: #fff;
+    margin-top: 16px;
+}
+
+.filmTitle{
+    margin-bottom: 16px;
+}
+
+.filmImage{
+    height: 120px;
+    width: 100px;
+    margin-right: 24px;
+	border-radius: 8px;
+	object-fit: cover;
+	vertical-align: top;
+}
+
+.discWrap{
+    display: flex;
+    margin-bottom: 12px;
+    margin-right: 434px;
+}
+
+.discTitle{
+    min-width: 90px;
+    color: #ABABAB;
+    margin-right: 16px;
+}
+
+.discValue{
+    max-width: 600px;
+}

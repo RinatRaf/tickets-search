@@ -1,0 +1,32 @@
+.headerWrap {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 88px;
+    background: #333;
+    padding: 24px 32px;
+    align-items: center;
+}
+
+.h2 {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 32px;
+    color: #fff;
+}
+
+.user {
+    border-radius: 50%;    
+    width: 40px;
+    height: 40px;
+    background: #fff url('./assets/person.svg') no-repeat center;
+    background-size: 24px 24px;
+    margin-right: 16px;
+}
+
+.loginWrap{
+    display: flex;
+}
