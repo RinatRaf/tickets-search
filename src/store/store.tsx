@@ -7,11 +7,12 @@ const store = configureStore({
   reducer: {
     auth: authSlice,
     [FilmsApi.reducerPath]: FilmsApi.reducer,
-    // [ratingApi.reducerPath]: ratingApi.reducer,
+    [ratingApi.reducerPath]: ratingApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(FilmsApi.middleware),
-  // .concat(ratingApi.middleware),
+    getDefaultMiddleware()
+      .concat(FilmsApi.middleware)
+      .concat(ratingApi.middleware),
 });
 
 export default store;

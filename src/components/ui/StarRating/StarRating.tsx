@@ -12,7 +12,7 @@ interface StarRatingProps {
 const StarRating: React.FC<StarRatingProps> = ({ filmId }) => {
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState<number | null>(null);
-  // const [mutate] = useRateMovieMutation();
+  const [mutate] = useRateMovieMutation();
 
   const handleMouseEnter = (index: number) => {
     setHoverRating(index);
@@ -24,7 +24,7 @@ const StarRating: React.FC<StarRatingProps> = ({ filmId }) => {
 
   const handleClick = (index: number) => {
     setRating(index);
-    // mutate({ movieId: filmId, user_rate: index });
+    mutate({ movieId: filmId, user_rate: index });
   };
 
   const renderStars = () => {
