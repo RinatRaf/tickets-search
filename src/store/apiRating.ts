@@ -8,20 +8,17 @@ export const ratingApi = createApi({
         headers: { 'Content-Type': 'application.json', 'Authorization': `Bearer ${localStorage.getItem('user_token')}` }
     }),
     endpoints: builder => ({
-        rateFilm: builder.mutation<unknown, { FilmId: string, user_rate: number }>({
+        rateFilm: builder.mutation<unknown, { movieId: 14, user_rate: 2 }>({
+                        
             query: (params) => ({
                 url: `rateMovie`,
                 method: 'POST',
                 body: params
             }),
-            invalidatesTags: (_, __, params) => [{ type: 'Film', id: params.FilmId }],
-            // onQueryStarted: async (arg, api) => {
-            //     await api.queryFulfilled;
-            //     api.dispatch(FilmsApi.util.invalidateTags([{ type: 'Film', id: arg.FilmId }]))
-            // }
+            invalidatesTags: (_, __, params) => [{ type: 'Film', id: params.movieId }],
         })
     })
 })
 
 type rateFilmHook = typeof ratingApi.endpoints.rateFilm.useMutation;
-export const useRateMovie: rateFilmHook = ratingApi.endpoints.rateFilm.useMutation;
+export const useRateMovieMutation: rateFilmHook = ratingApi.endpoints.rateFilm.useMutation;

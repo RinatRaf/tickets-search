@@ -3,7 +3,7 @@ import filledStar from "./assets/star_filled.svg";
 import emptyStar from "./assets/star_empty.svg";
 import grayStar from "./assets/star_hover.svg";
 import style from "./index.module.css";
-import { useRateMovie } from "../../../store/apiRating";
+import { useRateMovieMutation } from "../../../store/apiRating";
 
 interface StarRatingProps {
   filmId: string;
@@ -12,7 +12,7 @@ interface StarRatingProps {
 const StarRating: React.FC<StarRatingProps> = ({ filmId }) => {
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState<number | null>(null);
-  // const [rateFilm] = useRateMovie();
+  // const [mutate] = useRateMovieMutation();
 
   const handleMouseEnter = (index: number) => {
     setHoverRating(index);
@@ -24,7 +24,7 @@ const StarRating: React.FC<StarRatingProps> = ({ filmId }) => {
 
   const handleClick = (index: number) => {
     setRating(index);
-    // rateFilm({ FilmId: filmId, user_rate: index });
+    // mutate({ movieId: filmId, user_rate: index });
   };
 
   const renderStars = () => {
